@@ -7,8 +7,8 @@ extend type QueryResolver {
 }
 
 extend type MutationResolver {
-    newDoctor(employee: DoctorInput!): Doctor
-    updateDoctor(id: ID!, firstName: String!,lastName: String!,position: String!,salary: Int,age: Int,birthday: Date,organizationId: Int!,departmentId: Int!): Doctor!
+    newDoctor(doctor: DoctorInput!): Doctor
+    updateDoctor(id: ID!, doctor: DoctorInput!): Doctor!
     deleteDoctor(id: ID!): Boolean
 }
 

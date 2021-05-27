@@ -5,7 +5,7 @@ type QueryResolver {
 
 type MutationResolver {
     newDepartment(department: DepartmentInput!): Department
-    updateDepartment(id: ID!, name: String!): Department!
+    updateDepartment(id: ID!, department: DepartmentInput!): Department!
     deleteDepartment(id: ID!): Boolean
 }
 
