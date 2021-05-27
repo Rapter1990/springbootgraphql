@@ -18,3 +18,7 @@ spring:
         enable_lazy_load_no_trans: true
 server:
   port : 8081
+
+graphql:
+  servlet:
+    mapping: /graphql
