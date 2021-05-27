@@ -43,4 +43,5 @@ public class DepartmentMutableResolver implements GraphQLMutationResolver {
         departmentRepository.deleteById(id);
         return true;
     }
+
 }

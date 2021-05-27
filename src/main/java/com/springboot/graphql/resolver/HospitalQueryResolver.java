@@ -23,4 +23,5 @@ public class HospitalQueryResolver implements GraphQLQueryResolver {
     public Hospital hospital(Integer id) {
         return hospitalRepository.findById(id).orElseThrow();
     }
+
 }

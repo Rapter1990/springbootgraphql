@@ -10,6 +10,7 @@ import java.util.Date;
 
 @Data
 public class FilterField {
+
     private String operator;
     private String value;
 

@@ -71,4 +71,5 @@ public class DepartmentQueryResolver implements GraphQLQueryResolver {
     private Specification<Department> byId(Integer id) {
         return (Specification<Department>) (root, query, builder) -> builder.equal(root.get("id"), id);
     }
+
 }

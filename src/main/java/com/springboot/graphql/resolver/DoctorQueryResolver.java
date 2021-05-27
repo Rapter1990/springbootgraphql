@@ -57,4 +57,5 @@ public class DoctorQueryResolver implements GraphQLQueryResolver {
     private Specification<Doctor> byBirthday(FilterField filterField) {
         return (Specification<Doctor>) (root, query, builder) -> filterField.generateCriteria(builder, root.get("birthday"));
     }
+
 }

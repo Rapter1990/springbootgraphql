@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DepartmentInput {
+
     private String name;
     private Integer organizationId;
+
 }

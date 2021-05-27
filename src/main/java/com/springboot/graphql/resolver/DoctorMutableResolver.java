@@ -49,4 +49,5 @@ public class DoctorMutableResolver implements GraphQLMutationResolver {
         doctorRepository.deleteById(id);
         return true;
     }
+
 }

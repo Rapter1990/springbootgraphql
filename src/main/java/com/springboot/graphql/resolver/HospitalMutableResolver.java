@@ -33,4 +33,5 @@ public class HospitalMutableResolver implements GraphQLMutationResolver {
         hospitalRepository.deleteById(id);
         return true;
     }
+
 }

@@ -10,6 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DoctorInput {
+
     private String firstName;
     private String lastName;
     private String position;
@@ -18,4 +19,5 @@ public class DoctorInput {
     private Date birthday;
     private Integer departmentId;
     private Integer organizationId;
+
 }
