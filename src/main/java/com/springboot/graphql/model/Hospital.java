@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import java.io.Serializable;
 import java.util.Set;
 
-@Entity
+@Entity(name = "hospital")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

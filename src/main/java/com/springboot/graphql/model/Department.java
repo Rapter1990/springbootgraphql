@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
-@Entity
+@Entity(name = "department")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
