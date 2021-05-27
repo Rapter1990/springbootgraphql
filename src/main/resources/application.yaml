@@ -16,3 +16,5 @@ spring:
         show_sql: true
         format_sql: true
         enable_lazy_load_no_trans: true
+server:
+  port : 8081
