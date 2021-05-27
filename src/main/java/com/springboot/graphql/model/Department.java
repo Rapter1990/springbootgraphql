@@ -20,6 +20,7 @@ public class Department implements Serializable {
     @GeneratedValue
     @EqualsAndHashCode.Include
     private Integer id;
+
     private String name;
 
     @OneToMany(mappedBy = "department")
@@ -27,4 +28,5 @@ public class Department implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Hospital hospital;
+
 }
