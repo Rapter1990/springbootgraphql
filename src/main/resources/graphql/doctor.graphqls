@@ -1,0 +1,52 @@
+scalar Date
+
+extend type QueryResolver {
+    doctors: [Doctor]
+    doctorsWithFilter(filter: DoctorFilter): [Doctor]
+    doctor(id: ID!): Doctor!
+}
+
+extend type MutationResolver {
+    newDoctor(employee: DoctorInput!): Doctor
+    updateDoctor(id: ID!, firstName: String!,lastName: String!,position: String!,salary: Int,age: Int,birthday: Date,organizationId: Int!,departmentId: Int!): Doctor!
+    deleteDoctor(id: ID!): Boolean
+}
+
+input DoctorInput {
+    firstName: String!
+    lastName: String!
+    position: String!
+    salary: Int
+    age: Int
+    birthday: Date
+    organizationId: Int!
+    departmentId: Int!
+}
+
+type Doctor {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    position: String!
+    salary: Int
+    age: Int
+    birthday: Date
+    department: Department
+    hospital: Hospital
+}
+
+input DoctorFilter {
+    salary: FilterField
+    age: FilterField
+    position: FilterField
+}
+
+input FilterField {
+    operator: String!
+    value: String!
+}
+
+schema {
+    query: QueryResolver
+    mutation: MutationResolver
+}
