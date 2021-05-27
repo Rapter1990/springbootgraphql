@@ -10,6 +10,7 @@ spring:
       connection-timeout: 2000
       initialization-fail-timeout: 0
   jpa:
+    defer-datasource-initialization: true
     database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
@@ -21,6 +22,7 @@ spring:
   h2:
     console:
       enabled: true
+
 server:
   port : 8081
 
@@ -28,4 +30,7 @@ server:
 graphql:
   servlet:
     mapping: /graphql
+
+
+
 
