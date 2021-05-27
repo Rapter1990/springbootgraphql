@@ -2,7 +2,7 @@ spring:
   application:
     name: springbootgraphql
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb;DATABASE_TO_UPPER=false
     driverClassName: org.h2.Driver
     username: sa
     password: password
@@ -19,6 +19,7 @@ spring:
 server:
   port : 8081
 
+# http://localhost:8081/graphql
 graphql:
   servlet:
     mapping: /graphql
