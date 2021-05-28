@@ -17,7 +17,7 @@ import java.util.Date;
 public class Doctor implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer id;
 

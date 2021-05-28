@@ -17,7 +17,7 @@ import java.util.Set;
 public class Department implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer id;
 
