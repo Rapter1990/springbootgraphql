@@ -28,7 +28,7 @@ public class DoctorMutableResolver implements GraphQLMutationResolver {
 
     public Doctor newDoctor(DoctorInput doctorInput) {
         Department department = departmentRepository.findById(doctorInput.getDepartmentId()).get();
-        Hospital hospital = hospitalRepository.findById(doctorInput.getOrganizationId()).get();
+        Hospital hospital = hospitalRepository.findById(doctorInput.getHospitalId()).get();
         return doctorRepository.save(new Doctor(null, doctorInput.getFirstName(), doctorInput.getLastName(),
                 doctorInput.getPosition(), doctorInput.getAge(), doctorInput.getSalary(),
                 doctorInput.getBirthday(),
@@ -37,7 +37,7 @@ public class DoctorMutableResolver implements GraphQLMutationResolver {
 
     public Doctor updateDoctor(Integer id, DoctorInput doctorInput) {
         Department department = departmentRepository.findById(doctorInput.getDepartmentId()).get();
-        Hospital hospital = hospitalRepository.findById(doctorInput.getOrganizationId()).get();
+        Hospital hospital = hospitalRepository.findById(doctorInput.getHospitalId()).get();
 
         return doctorRepository.save(new Doctor(id, doctorInput.getFirstName(), doctorInput.getLastName(),
                 doctorInput.getPosition(), doctorInput.getAge(), doctorInput.getSalary(),

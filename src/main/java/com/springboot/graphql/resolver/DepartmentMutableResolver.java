@@ -23,12 +23,12 @@ public class DepartmentMutableResolver implements GraphQLMutationResolver {
     }
 
     public Department newDepartment(DepartmentInput departmentInput) {
-        Hospital hospital = hospitalRepository.findById(departmentInput.getOrganizationId()).get();
+        Hospital hospital = hospitalRepository.findById(departmentInput.getHospitalId()).get();
         return departmentRepository.save(new Department(null, departmentInput.getName(), null, hospital));
     }
 
     public Department updateDepartment(Integer id , DepartmentInput departmentInput) {
-        Hospital hospital = hospitalRepository.findById(departmentInput.getOrganizationId()).get();
+        Hospital hospital = hospitalRepository.findById(departmentInput.getHospitalId()).get();
 
         Department updatedDepartment = new Department();
         updatedDepartment.setId(id);
