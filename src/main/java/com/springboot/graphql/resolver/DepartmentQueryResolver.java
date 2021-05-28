@@ -33,11 +33,11 @@ public class DepartmentQueryResolver implements GraphQLQueryResolver {
         DataFetchingFieldSelectionSet s = environment.getSelectionSet();
         List<Specification<Department>> specifications = new ArrayList<>();
         if (s.contains("doctors") && !s.contains("hospital"))
-            return departmentRepository.findAll(fetchEmployees());
+            return departmentRepository.findAll(fetchDoctors());
         else if (!s.contains("doctors") && s.contains("hospital"))
-            return departmentRepository.findAll(fetchOrganization());
+            return departmentRepository.findAll(fetchHospital());
         else if (s.contains("doctors") && s.contains("hospital"))
-            return departmentRepository.findAll(fetchEmployees().and(fetchOrganization()));
+            return departmentRepository.findAll(fetchDoctors().and(fetchHospital()));
         else
             return departmentRepository.findAll();
     }
@@ -45,24 +45,24 @@ public class DepartmentQueryResolver implements GraphQLQueryResolver {
     public Department department(Integer id, DataFetchingEnvironment environment) {
         Specification<Department> spec = byId(id);
         DataFetchingFieldSelectionSet selectionSet = environment.getSelectionSet();
-        if (selectionSet.contains("employees"))
-            spec = spec.and(fetchEmployees());
-        if (selectionSet.contains("organization"))
-            spec = spec.and(fetchOrganization());
+        if (selectionSet.contains("doctors"))
+            spec = spec.and(fetchDoctors());
+        if (selectionSet.contains("hospital"))
+            spec = spec.and(fetchHospital());
         return departmentRepository.findOne(spec).orElseThrow(NoSuchElementException::new);
     }
 
-    private Specification<Department> fetchOrganization() {
+    private Specification<Department> fetchHospital() {
         return (Specification<Department>) (root, query, builder) -> {
-            Fetch<Department, Hospital> f = root.fetch("organization", JoinType.LEFT);
+            Fetch<Department, Hospital> f = root.fetch("hospital", JoinType.LEFT);
             Join<Department, Hospital> join = (Join<Department, Hospital>) f;
             return join.getOn();
         };
     }
 
-    private Specification<Department> fetchEmployees() {
+    private Specification<Department> fetchDoctors() {
         return (Specification<Department>) (root, query, builder) -> {
-            Fetch<Department, Doctor> f = root.fetch("employees", JoinType.LEFT);
+            Fetch<Department, Doctor> f = root.fetch("doctors", JoinType.LEFT);
             Join<Department, Doctor> join = (Join<Department, Doctor>) f;
             return join.getOn();
         };

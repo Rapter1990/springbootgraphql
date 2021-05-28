@@ -11,7 +11,7 @@ type MutationResolver {
 
 input DepartmentInput {
     name: String!
-    organizationId: Int
+    hospitalId: Int
 }
 
 type Department {
