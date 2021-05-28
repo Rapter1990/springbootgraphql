@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class DepartmentInput {
 
     private String name;
-    private Integer organizationId;
+    private Integer hospitalId;
 
 }

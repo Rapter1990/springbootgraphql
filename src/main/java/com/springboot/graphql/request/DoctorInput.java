@@ -18,6 +18,6 @@ public class DoctorInput {
     private int age;
     private Date birthday;
     private Integer departmentId;
-    private Integer organizationId;
+    private Integer hospitalId;
 
 }
