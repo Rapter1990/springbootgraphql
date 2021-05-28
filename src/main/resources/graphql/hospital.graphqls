@@ -5,7 +5,7 @@ extend type QueryResolver {
 
 extend type MutationResolver {
     newHospital(hospital: HospitalInput!): Hospital
-    updateHospital(id: ID!, name: String!): Hospital!
+    updateHospital(id: ID!, hospital: HospitalInput!): Hospital!
     deleteHospital(id: ID!): Boolean
 }
 
