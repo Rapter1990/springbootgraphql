@@ -7,9 +7,9 @@ extend type QueryResolver {
 }
 
 extend type MutationResolver {
-    NewDoctor(doctor: DoctorInput!): Doctor
-    UpdateDoctor(id: ID!, doctor: DoctorInput!): Doctor!
-    DeleteDoctor(id: ID!): Boolean
+    newDoctor(doctor: DoctorInput!): Doctor
+    updateDoctor(id: ID!, doctor: DoctorInput!): Doctor!
+    deleteDoctor(id: ID!): Boolean
 }
 
 input DoctorInput {
