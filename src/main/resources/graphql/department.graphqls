@@ -4,9 +4,9 @@ type QueryResolver {
 }
 
 type MutationResolver {
-    newDepartment(department: DepartmentInput!): Department
-    updateDepartment(id: ID!, department: DepartmentInput!): Department!
-    deleteDepartment(id: ID!): Boolean
+    NewDepartment(department: DepartmentInput!): Department
+    UpdateDepartment(id: ID!, department: DepartmentInput!): Department!
+    DeleteDepartment(id: ID!): Boolean
 }
 
 input DepartmentInput {
