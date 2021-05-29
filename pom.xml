@@ -81,6 +81,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.zhokhov.graphql</groupId>
+            <artifactId>graphql-datetime-spring-boot-starter</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
