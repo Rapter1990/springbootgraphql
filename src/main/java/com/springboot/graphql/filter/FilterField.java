@@ -33,10 +33,14 @@ public class FilterField {
                 case "birthdayDate":
 
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    String[] values = value.split(",");
 
                     try {
-                        Date dBegin = dateFormat.parse("1980-01-01");
-                        Date dEnd = dateFormat.parse(value); // "1990-05-01"
+                        Date dBegin = dateFormat.parse(values[0]); // "1980-01-01"
+                        Date dEnd = dateFormat.parse(values[1]); // "1990-05-01"
+
+                        System.out.println("dBegin : " + dBegin);
+                        System.out.println("dEnd : " + dEnd);
 
                         return builder.between(field,
                                 dBegin,
