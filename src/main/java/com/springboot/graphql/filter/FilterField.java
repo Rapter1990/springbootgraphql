@@ -36,7 +36,7 @@ public class FilterField {
 
                     try {
                         Date dBegin = dateFormat.parse("1980-01-01");
-                        Date dEnd = dateFormat.parse("1990-05-01");
+                        Date dEnd = dateFormat.parse(value); // "1990-05-01"
 
                         return builder.between(field,
                                 dBegin,
