@@ -6,6 +6,8 @@ import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Predicate;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @Data
@@ -32,24 +34,22 @@ public class FilterField {
                 case "eq": return builder.equal(field, value);
                 case "birthdayDate":
 
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
                     String[] values = value.split(",");
 
-                    try {
-                        Date dBegin = dateFormat.parse(values[0]); // "1980-01-01"
-                        Date dEnd = dateFormat.parse(values[1]); // "1990-05-01"
+                    //Date dBegin = dateFormat.parse(values[0]); // "1980-01-01"
+                    //Date dEnd = dateFormat.parse(values[1]); // "1990-05-01"
 
-                        System.out.println("dBegin : " + dBegin);
-                        System.out.println("dEnd : " + dEnd);
+                    LocalDate dBegin = LocalDate.parse(values[0], formatter);
+                    LocalDate dEnd = LocalDate.parse(values[1], formatter);
 
-                        return builder.between(field,
+                    System.out.println("dBegin : " + dBegin);
+                    System.out.println("dEnd : " + dEnd);
+
+                    return builder.between(field,
                                 dBegin,
                                 dEnd);
-
-                    } catch (ParseException parseException) {
-                        parseException.printStackTrace();
-                    }
-
             }
         }
 
