@@ -62,7 +62,7 @@ public class DoctorQueryResolver implements GraphQLQueryResolver {
         if (filter.getSalary() != null)
             spec = bySalary(filter.getSalary());
         if (filter.getBirthday() != null)
-            spec = byBirthday(filter.getBirthday());
+            spec = (spec == null ? byBirthday(filter.getBirthday()) : spec.and(byBirthday(filter.getBirthday())));
         if (filter.getAge() != null)
             spec = (spec == null ? byAge(filter.getAge()) : spec.and(byAge(filter.getAge())));
         if (filter.getPosition() != null)
