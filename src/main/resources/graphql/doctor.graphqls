@@ -39,6 +39,7 @@ input DoctorFilter {
     salary: FilterField
     age: FilterField
     position: FilterField
+    birthday: FilterField
 }
 
 input FilterField {
