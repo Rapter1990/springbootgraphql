@@ -61,6 +61,8 @@ public class DoctorQueryResolver implements GraphQLQueryResolver {
         Specification<Doctor> spec = null;
         if (filter.getSalary() != null)
             spec = bySalary(filter.getSalary());
+        if (filter.getBirthday() != null)
+            spec = byBirthday(filter.getBirthday());
         if (filter.getAge() != null)
             spec = (spec == null ? byAge(filter.getAge()) : spec.and(byAge(filter.getAge())));
         if (filter.getPosition() != null)
