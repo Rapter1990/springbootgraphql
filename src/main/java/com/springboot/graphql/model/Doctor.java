@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity(name = "doctor")
 @Data
@@ -31,7 +31,7 @@ public class Doctor implements Serializable {
 
     private int age;
 
-    private Date birthday;
+    private LocalDate birthday;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Department department;

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -16,7 +16,7 @@ public class DoctorInput {
     private String position;
     private int salary;
     private int age;
-    private Date birthday;
+    private LocalDate birthday;
     private Integer departmentId;
     private Integer hospitalId;
 

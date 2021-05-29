@@ -1,4 +1,4 @@
-scalar Date
+scalar LocalDate
 
 extend type QueryResolver {
     doctors: [Doctor]
@@ -18,7 +18,7 @@ input DoctorInput {
     position: String!
     salary: Int
     age: Int
-    birthday: Date
+    birthday: LocalDate
     organizationId: Int!
     departmentId: Int!
 }
@@ -30,7 +30,7 @@ type Doctor {
     position: String!
     salary: Int
     age: Int
-    birthday: Date
+    birthday: LocalDate
     department: Department
     hospital: Hospital
 }
