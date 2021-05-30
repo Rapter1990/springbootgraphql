@@ -38,8 +38,8 @@ public class FilterField {
 
                     String[] values = value.split(",");
 
-                    //Date dBegin = dateFormat.parse(values[0]); // "1980-01-01"
-                    //Date dEnd = dateFormat.parse(values[1]); // "1990-05-01"
+                    // "1980-01-01"
+                    // "1990-05-01"
 
                     LocalDate dBegin = LocalDate.parse(values[0], formatter);
                     LocalDate dEnd = LocalDate.parse(values[1], formatter);
