@@ -19,7 +19,7 @@ input DoctorInput {
     salary: Int
     age: Int
     birthday: LocalDate
-    organizationId: Int!
+    hospitalId: Int!
     departmentId: Int!
 }
 
