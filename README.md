@@ -22,7 +22,7 @@
 
 <table style="border: 0px;">
   <tr>
-     <td align="center" span="4"> Figure 1 </td>
+     <td align="center" rowspan="4"> Hospital </td>
   </tr>
   <tr>
      <td align="center"> Query Information </td>
@@ -30,14 +30,50 @@
      <td align="center"> Query Variables </td>
   </tr>
   <tr>
-       <td align="center"></td>
-       <td align="center"></td>
-       <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
   </tr>
   <tr>
-         <td align="center"></td>
-         <td align="center"></td>
-         <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+     <td align="center" rowspan="4"> Department </td>
+  </tr>
+  <tr>
+     <td align="center"> Query Information </td>
+     <td align="center"> Query </td>
+     <td align="center"> Query Variables </td>
+  </tr>
+  <tr>
+     <td align="center"></td>
+     <td align="center"></td>
+     <td align="center"></td>
+  </tr>
+  <tr>
+     <td align="center"></td>
+     <td align="center"></td>
+     <td align="center"></td>
+  </tr>
+  <tr>
+     <td align="center" rowspan="4"> Doctor </td>
+  </tr>
+  <tr>
+     <td align="center"> Query Information </td>
+     <td align="center"> Query </td>
+     <td align="center"> Query Variables </td>
+  </tr>
+  <tr>
+     <td align="center"></td>
+     <td align="center"></td>
+     <td align="center"></td>
+  </tr>
+  <tr>
+     <td align="center"></td>
+     <td align="center"></td>
+     <td align="center"></td>
   </tr>
 </table>
 
