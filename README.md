@@ -18,6 +18,28 @@
 
 <b>3 )</b> 
 
+### Table
+
+<table style="border: 0px;">
+  <tr>
+     <td align="center" span="4"> Figure 1 </td>
+  </tr>
+  <tr>
+     <td align="center"> Query Information </td>
+     <td align="center"> Query </td>
+     <td align="center"> Query Variables </td>
+  </tr>
+  <tr>
+       <td align="center"></td>
+       <td align="center"></td>
+       <td align="center"></td>
+  </tr>
+  <tr>
+         <td align="center"></td>
+         <td align="center"></td>
+         <td align="center"></td>
+  </tr>
+</table>
 
 ### Screenshots
 
