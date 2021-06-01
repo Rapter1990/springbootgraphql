@@ -34,14 +34,12 @@
       <td align="center">Get All Hospital List</td>
       <td align="center">
            <code>
-               <pre>
                {
                  hospitals {
                      id
                      name
                  }
                }
-               </pre>
            </code>
       </td>
       <td align="center"> No Query Variable </td>
@@ -50,14 +48,12 @@
       <td align="center">Get Hospital by Id</td>
       <td align="center">
         <code>
-            <pre>
-                query{
-                  hospital(id:3) {
-                    id
-                    name
-                  }
-                }
-            </pre>
+            query{
+              hospital(id:3) {
+                id
+                name
+              }
+            }
         </code>
       </td>
       <td align="center"> No Query Variable </td>
@@ -66,24 +62,20 @@
       <td align="center">Add New Hospital</td>
       <td align="center">
         <code>
-            <pre>
             mutation newHospital($hospitalInput: HospitalInput!) {
               newHospital(hospital: $hospitalInput){
                 name
               }
             }
-            </pre>
         </code>      
       </td>
       <td align="center">
         <code>
-            <pre>
             {
               "hospitalInput": {
                 "name": "Hospital 6"
               }
             }
-            </pre>
         </code>     
       </td>
   </tr>
@@ -91,7 +83,6 @@
       <td align="center">Update Hospital By Id</td>
       <td align="center">
         <code>
-            <pre>
             mutation {
               updateHospital (
                 id: 6
@@ -101,7 +92,6 @@
                   name
                 }
             }
-            </pre>
         </code>
       </td>
       <td align="center"> No Query Variable </td>
@@ -110,11 +100,9 @@
         <td align="center">Delete Hospital by Id</td>
         <td align="center">
           <code>
-              <pre>
               mutation {
                 deleteHospital (id: 6)
               }
-              </pre>
           </code>
         </td>
         <td align="center"> No Query Variable </td>
