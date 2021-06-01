@@ -1,6 +1,6 @@
 # Spring Boot and Graphql
 
-<img src="screenshots/springbootgraphql.PNG" alt="Main Information" width="800" height="300">
+<img src="screenshots/springbootgraphql.PNG" alt="Main Information" width="800" height="400">
 
 ### 📖 Information
 
