@@ -108,22 +108,244 @@
         <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center" rowspan="4"> Department </td>
+     <td align="center" rowspan="12"> Department </td>
   </tr>
   <tr>
-     <td align="center"> Query Information </td>
-     <td align="center"> Query </td>
-     <td align="center"> Query Variables </td>
+     <td align="center"> Get All Department list with showing Hospital and Doctor </td>
+     <td align="center">
+        <code>
+            {
+              departments{
+                id
+                name
+                doctors{
+                  id
+                  firstName
+                  lastName
+                  salary
+                  position
+                  age
+                  birthday
+                }
+                hospital{
+                  id
+                  name
+                }
+              }
+            }
+        </code>
+     </td>
+     <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center"></td>
-     <td align="center"></td>
-     <td align="center"></td>
+     <td align="center"> Get All Department list with showing only Doctor</td>
+     <td align="center">
+        <code>
+            {
+              departments{
+                id
+                name
+                doctors{
+                  id
+                  firstName
+                  lastName
+                  salary
+                  age
+                  birthday
+                }
+              }
+            }
+        </code>
+     </td>
+     <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center"></td>
-     <td align="center"></td>
-     <td align="center"></td>
+     <td align="center"> Get All Department list with showing only Hospital</td>
+     <td align="center">
+        <code>
+            {
+              departments{
+                id
+                name
+                hospital{
+                  id
+                  name
+                }
+              }
+            }
+        </code>
+     </td>
+     <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+       <td align="center"> Get All Department list with showing its information</td>
+       <td align="center">
+          <code>
+              {
+                departments{
+                  id
+                  name
+                }
+              }
+          </code>
+       </td>
+       <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+       <td align="center"> Get Department by Id with showing Hospital and Doctor </td>
+       <td align="center">
+          <code>
+              query {
+                department(id:6){
+                  id
+                  name
+                  doctors{
+                    id
+                    firstName
+                    lastName
+                    salary
+                    position
+                    age
+                    birthday
+                  }
+                  hospital{
+                    id
+                    name
+                  }
+                }
+              }
+          </code>
+       </td>
+       <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get Department by Id with showing Hospital </td>
+        <td align="center">
+            <code>
+                query {
+                  department(id:6){
+                    id
+                    name
+                    hospital{
+                      id
+                      name
+                    }
+                  }
+                }
+            </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get Department by Id with showing Doctor </td>
+        <td align="center">
+              <code>
+                  query {
+                    department(id:6){
+                      id
+                      name
+                      doctors{
+                         id
+                         firstName
+                         lastName
+                         salary
+                         position
+                         age
+                         birthday
+                      }
+                    }
+                  }
+              </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get Department by Id with showing its information </td>
+        <td align="center">
+            <code>
+                query {
+                  department(id:6){
+                    id
+                    name
+                  }
+                }
+            </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get Department by Id with showing its information </td>
+        <td align="center">
+          <code>
+              query {
+                department(id:6){
+                  id
+                  name
+                }
+              }
+          </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Add New Department </td>
+        <td align="center">
+            <code>
+                mutation newDepartment($departmentInput: DepartmentInput!) {
+                  newDepartment(department: $departmentInput){
+                    name
+                    hospital{
+                      id
+                    }
+                  }
+                }
+            </code>
+        </td>
+        <td align="center">
+            <code>
+                {
+                  "departmentInput": {
+                    "name": "Department 10",
+                    "hospitalId": 3
+                  }
+                }
+            </code>
+        </td>
+  </tr>
+  <tr>
+      <td align="center"> Update Department By Id</td>
+      <td align="center">
+          <code>
+              mutation updateDepartment($departmentInput: DepartmentInput!) {
+                updateDepartment(id: 10,department: $departmentInput){
+                  name
+                }
+              }
+          </code>
+      </td>
+      <td align="center">
+          <code>
+              {
+                "departmentInput": {
+                  "name": "Department 10 Update",
+                  "hospitalId": 3
+                }
+              }
+          </code>
+      </td>
+  </tr>
+  <tr>
+    <td align="center"> Delete Department By Id</td>
+    <td align="center">
+        <code>
+            mutation {
+              deleteDepartment (id: 10)
+            }
+        </code>
+    </td>
+    <td align="center">
+        No Query Variable
+    </td>
   </tr>
   <tr>
      <td align="center" rowspan="4"> Doctor </td>
