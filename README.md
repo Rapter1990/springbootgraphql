@@ -26,7 +26,7 @@
      <td align="center" colspan="3"> Information </td>
   </tr>
   <tr>
-     <td align="center" rowspan="4"> Hospital </td>
+     <td align="center" rowspan="6"> Hospital </td>
   </tr>
   <tr>
      <td align="center"> Query Information </td>
