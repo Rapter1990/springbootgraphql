@@ -22,6 +22,10 @@
 
 <table style="border: 0px;">
   <tr>
+     <td align="center" colspan="1"> Entity </td>
+     <td align="center" colspan="3"> Information </td>
+  </tr>
+  <tr>
      <td align="center" rowspan="4"> Hospital </td>
   </tr>
   <tr>
