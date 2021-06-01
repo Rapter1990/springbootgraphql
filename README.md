@@ -28,7 +28,7 @@
      <td align="center"> <b>Query Variables</b> </td>
   </tr>
   <tr>
-     <td align="center" rowspan="5"> Hospital </td>
+     <td align="center" rowspan="6"> Hospital </td>
   </tr>
   <tr>
       <td align="center">Get All Hospital List</td>
