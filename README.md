@@ -34,7 +34,7 @@
      <td align="center"> Query Variables </td>
   </tr>
   <tr>
-      <td align="center"></td>
+      <td align="center">Get All Hospital List</td>
       <td align="center"></td>
       <td align="center"></td>
   </tr>
@@ -43,6 +43,46 @@
       <td align="center"></td>
       <td align="center"></td>
   </tr>
+  <tr>
+      <td align="center">Get Hospital by Id</td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center">Add New Hospital</td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center">Update Hospital by Id</td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center">Delete Hospital by Id</td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr>
+  <tr>
+      <td align="center"></td>
+      <td align="center"></td>
+      <td align="center"></td>
+  </tr> 
   <tr>
      <td align="center" rowspan="4"> Department </td>
   </tr>
