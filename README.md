@@ -22,10 +22,10 @@
 
 <table style="border: 0px;">
   <tr>
-     <td align="center" colspan="1"> Entity </td>
-     <td align="center"> Query Information </td>
-     <td align="center"> Query </td>
-     <td align="center"> Query Variables </td>
+     <td align="center" colspan="1"> <b>Entity</b> </td>
+     <td align="center"> <b>Query Information</b> </td>
+     <td align="center"> <b>Query</b> </td>
+     <td align="center"> <b>Query Variables</b> </td>
   </tr>
   <tr>
      <td align="center" rowspan="5"> Hospital </td>
