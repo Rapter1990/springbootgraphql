@@ -32,23 +32,80 @@
   </tr>
   <tr>
       <td align="center">Get All Hospital List</td>
-      <td align="center"></td>
-      <td align="center"></td>
+      <td align="center">
+           <code>
+               {
+                 hospitals {
+                     id
+                     name
+                 }
+               }
+           </code>
+      </td>
+      <td align="center"> No Query Variable </td>
   </tr>
   <tr>
       <td align="center">Get Hospital by Id</td>
-      <td align="center"></td>
-      <td align="center"></td>
+      <td align="center">
+        <code>
+            query{
+              hospital(id:3) {
+                id
+                name
+              }
+            }
+        </code>
+      </td>
+      <td align="center"> No Query Variable </td>
   </tr>
   <tr>
       <td align="center">Add New Hospital</td>
-      <td align="center"></td>
-      <td align="center"></td>
+      <td align="center">
+        <code>
+            mutation newHospital($hospitalInput: HospitalInput!) {
+              newHospital(hospital: $hospitalInput){
+                name
+              }
+            }
+        </code>      
+      </td>
+      <td align="center">
+        <code>
+            {
+              "hospitalInput": {
+                "name": "Hospital 6"
+              }
+            }
+        </code>     
+      </td>
   </tr>
   <tr>
       <td align="center">Update Hospital By Id</td>
-      <td align="center"></td>
-      <td align="center"></td>
+      <td align="center">
+        <code>
+            mutation {
+              updateHospital (
+                id: 6
+                name: "Hospital 6 Updated")
+                {
+                  id
+                  name
+                }
+            }
+        </code>
+      </td>
+      <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center">Delete Hospital by Id</td>
+        <td align="center">
+          <code>
+              mutation {
+                deleteHospital (id: 6)
+              }
+          </code>
+        </td>
+        <td align="center"> No Query Variable </td>
   </tr>
   <tr>
      <td align="center" rowspan="4"> Department </td>
