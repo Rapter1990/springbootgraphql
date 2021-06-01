@@ -23,15 +23,12 @@
 <table style="border: 0px;">
   <tr>
      <td align="center" colspan="1"> Entity </td>
-     <td align="center" colspan="3"> Information </td>
-  </tr>
-  <tr>
-     <td align="center" rowspan="6"> Hospital </td>
-  </tr>
-  <tr>
      <td align="center"> Query Information </td>
      <td align="center"> Query </td>
      <td align="center"> Query Variables </td>
+  </tr>
+  <tr>
+     <td align="center" rowspan="5"> Hospital </td>
   </tr>
   <tr>
       <td align="center">Get All Hospital List</td>
