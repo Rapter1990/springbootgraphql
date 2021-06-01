@@ -33,13 +33,15 @@
   <tr>
       <td align="center">Get All Hospital List</td>
       <td align="center">
-           <code style="display: block; white-space: pre-wrap">
+           <code>
+               <pre>
                {
                  hospitals {
                      id
                      name
                  }
                }
+               </pre>
            </code>
       </td>
       <td align="center"> No Query Variable </td>
@@ -47,13 +49,15 @@
   <tr>
       <td align="center">Get Hospital by Id</td>
       <td align="center">
-        <code style="display: block; white-space: pre-wrap">
-            query{
-              hospital(id:3) {
-                id
-                name
-              }
-            }
+        <code>
+            <pre>
+                query{
+                  hospital(id:3) {
+                    id
+                    name
+                  }
+                }
+            </pre>
         </code>
       </td>
       <td align="center"> No Query Variable </td>
@@ -61,28 +65,33 @@
   <tr>
       <td align="center">Add New Hospital</td>
       <td align="center">
-        <code style="display: block; white-space: pre-wrap">
+        <code>
+            <pre>
             mutation newHospital($hospitalInput: HospitalInput!) {
               newHospital(hospital: $hospitalInput){
                 name
               }
             }
+            </pre>
         </code>      
       </td>
       <td align="center">
-        <code style="display: block; white-space: pre-wrap">
+        <code>
+            <pre>
             {
               "hospitalInput": {
                 "name": "Hospital 6"
               }
             }
+            </pre>
         </code>     
       </td>
   </tr>
   <tr>
       <td align="center">Update Hospital By Id</td>
       <td align="center">
-        <code style="display: block; white-space: pre-wrap">
+        <code>
+            <pre>
             mutation {
               updateHospital (
                 id: 6
@@ -92,6 +101,7 @@
                   name
                 }
             }
+            </pre>
         </code>
       </td>
       <td align="center"> No Query Variable </td>
@@ -99,10 +109,12 @@
   <tr>
         <td align="center">Delete Hospital by Id</td>
         <td align="center">
-          <code style="display: block; white-space: pre-wrap">
+          <code>
+              <pre>
               mutation {
                 deleteHospital (id: 6)
               }
+              </pre>
           </code>
         </td>
         <td align="center"> No Query Variable </td>
