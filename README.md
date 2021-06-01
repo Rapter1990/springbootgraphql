@@ -26,7 +26,7 @@
      <td align="center" colspan="3"> Information </td>
   </tr>
   <tr>
-     <td align="center" rowspan="4"> Hospital </td>
+     <td align="center"> Hospital </td>
   </tr>
   <tr>
      <td align="center"> Query Information </td>
@@ -39,17 +39,7 @@
       <td align="center"></td>
   </tr>
   <tr>
-      <td align="center"></td>
-      <td align="center"></td>
-      <td align="center"></td>
-  </tr>
-  <tr>
       <td align="center">Get Hospital by Id</td>
-      <td align="center"></td>
-      <td align="center"></td>
-  </tr>
-  <tr>
-      <td align="center"></td>
       <td align="center"></td>
       <td align="center"></td>
   </tr>
@@ -59,17 +49,7 @@
       <td align="center"></td>
   </tr>
   <tr>
-      <td align="center"></td>
-      <td align="center"></td>
-      <td align="center"></td>
-  </tr>
-  <tr>
       <td align="center">Update Hospital by Id</td>
-      <td align="center"></td>
-      <td align="center"></td>
-  </tr>
-  <tr>
-      <td align="center"></td>
       <td align="center"></td>
       <td align="center"></td>
   </tr>
@@ -78,11 +58,6 @@
       <td align="center"></td>
       <td align="center"></td>
   </tr>
-  <tr>
-      <td align="center"></td>
-      <td align="center"></td>
-      <td align="center"></td>
-  </tr> 
   <tr>
      <td align="center" rowspan="4"> Department </td>
   </tr>
