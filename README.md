@@ -33,7 +33,7 @@
   <tr>
       <td align="center">Get All Hospital List</td>
       <td align="center">
-           <code>
+           <code style="display: block; white-space: pre-wrap">
                {
                  hospitals {
                      id
@@ -47,7 +47,7 @@
   <tr>
       <td align="center">Get Hospital by Id</td>
       <td align="center">
-        <code>
+        <code style="display: block; white-space: pre-wrap">
             query{
               hospital(id:3) {
                 id
@@ -61,7 +61,7 @@
   <tr>
       <td align="center">Add New Hospital</td>
       <td align="center">
-        <code>
+        <code style="display: block; white-space: pre-wrap">
             mutation newHospital($hospitalInput: HospitalInput!) {
               newHospital(hospital: $hospitalInput){
                 name
@@ -70,7 +70,7 @@
         </code>      
       </td>
       <td align="center">
-        <code>
+        <code style="display: block; white-space: pre-wrap">
             {
               "hospitalInput": {
                 "name": "Hospital 6"
@@ -82,7 +82,7 @@
   <tr>
       <td align="center">Update Hospital By Id</td>
       <td align="center">
-        <code>
+        <code style="display: block; white-space: pre-wrap">
             mutation {
               updateHospital (
                 id: 6
@@ -99,7 +99,7 @@
   <tr>
         <td align="center">Delete Hospital by Id</td>
         <td align="center">
-          <code>
+          <code style="display: block; white-space: pre-wrap">
               mutation {
                 deleteHospital (id: 6)
               }
