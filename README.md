@@ -49,12 +49,7 @@
       <td align="center"></td>
   </tr>
   <tr>
-      <td align="center">Update Hospital by Id</td>
-      <td align="center"></td>
-      <td align="center"></td>
-  </tr>
-  <tr>
-      <td align="center">Delete Hospital by Id</td>
+      <td align="center">Update Hospital By Id</td>
       <td align="center"></td>
       <td align="center"></td>
   </tr>
