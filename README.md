@@ -28,7 +28,7 @@
      <td align="center"> <b>Query Variables</b> </td>
   </tr>
   <tr>
-     <td align="center" rowspan="6"> Hospital </td>
+     <td align="center" rowspan="6"> <b>Hospital</b> </td>
   </tr>
   <tr>
       <td align="center">Get All Hospital List</td>
@@ -108,7 +108,7 @@
         <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center" rowspan="13"> Department </td>
+     <td align="center" rowspan="13"> <b>Department</b> </td>
   </tr>
   <tr>
      <td align="center"> Get All Department list with showing Hospital and Doctor </td>
@@ -348,7 +348,7 @@
     </td>
   </tr>
   <tr>
-     <td align="center" rowspan="4"> Doctor </td>
+     <td align="center" rowspan="4"> <b>Doctor</b> </td>
   </tr>
   <tr>
      <td align="center"> Query Information </td>
