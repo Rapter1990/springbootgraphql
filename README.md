@@ -108,7 +108,7 @@
         <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center" rowspan="12"> Department </td>
+     <td align="center" rowspan="13"> Department </td>
   </tr>
   <tr>
      <td align="center"> Get All Department list with showing Hospital and Doctor </td>
