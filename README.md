@@ -5,9 +5,9 @@
 ### 📖 Information
 
 <ul style="list-style-type:disc">
-  <li>Information 1 </li>
-  <li>Information 2</li>
-  <li>Information 3</li>
+  <li> <b>Graphql</b> is a query language to handle crud and other operations and is an alternative to REST for Web APIs. </li>
+  <li> To handle with all opeations, a file extension of <b>.graphql</b> should be defined. </li>
+  <li> All processes of <b>query</b> and <b>mutation</b> should becovered from <b>GraphQLQueryResolver</b> and <b>GraphQLMutationResolver</b> </li>
 </ul>
 
 ### 🔨 Run the App
@@ -16,9 +16,11 @@
 
 <b>2 )</b> Check if all <b>maven dependencies</b> are installed by using this code <code> mvn clean install </code>
 
-<b>3 )</b> Define a <b>query endpoint URL</b> in the <b>GraphiQL</b> (<code>http://localhost:8081/graphql</code>)
+<b>3 )</b> Add all relevant graphql dependencies in pom.xml
 
-<b>4 )</b> Run the <b>GraphiQL</b> after defining queries with its variable in its essential parts of the program
+<b>4 )</b> Define a <b>query endpoint URL</b> in the <b>GraphiQL</b> (<code>http://localhost:8081/graphql</code>)
+
+<b>5 )</b> Run the <b>GraphiQL</b> after defining queries with its variable in its essential parts of the program
 
 ### Table
 
