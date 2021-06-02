@@ -348,22 +348,338 @@
     </td>
   </tr>
   <tr>
-     <td align="center" rowspan="4"> <b>Doctor</b> </td>
+     <td align="center" rowspan="13"> <b>Doctor</b> </td>
   </tr>
   <tr>
-     <td align="center"> Query Information </td>
-     <td align="center"> Query </td>
-     <td align="center"> Query Variables </td>
+       <td align="center"> Get All Doctor list with showing Department and Hospital </td>
+       <td align="center">
+          <code>
+              {
+                doctors{
+                  id
+                  firstName
+                  lastName
+                  position
+                  age
+                  salary
+                  birthday
+                  department{
+                    id
+                    name
+                  }
+                  hospital{
+                    id
+                    name
+                  }
+                }
+              }
+          </code>
+       </td>
+       <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center"></td>
-     <td align="center"></td>
-     <td align="center"></td>
+        <td align="center"> Get All Doctor list with showing only Hospital</td>
+        <td align="center">
+            <code>
+                {
+                  doctors{
+                    id
+                    firstName
+                    lastName
+                    position
+                    age
+                    salary
+                    birthday
+                    hospital{
+                      id
+                      name
+                    }
+                  }
+                }
+            </code>
+        </td>
+        <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-     <td align="center"></td>
-     <td align="center"></td>
-     <td align="center"></td>
+      <td align="center"> Get All Doctor list with showing only Department</td>
+      <td align="center">
+          <code>
+              {
+                doctors{
+                  id
+                  firstName
+                  lastName
+                  position
+                  age
+                  salary
+                  birthday
+                  department{
+                    id
+                    name
+                  }
+                }
+              }
+          </code>
+      </td>
+      <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get All Doctor list with showing its information</td>
+        <td align="center">
+            <code>
+                {
+                  doctors{
+                    id
+                    firstName
+                    lastName
+                    position
+                    age
+                    salary
+                    birthday
+                  }
+                }
+            </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+          <td align="center"> Get Doctor by Id with showing Department and Hospital</td>
+          <td align="center">
+              <code>
+                  {
+                    doctor(id : 2){
+                      id
+                      firstName
+                      lastName
+                      position
+                      age
+                      salary
+                      birthday
+                      department{
+                        id
+                        name
+                      }
+                      hospital{
+                        id
+                        name
+                      }
+                    }
+                  }
+              </code>
+          </td>
+          <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+          <td align="center"> Get Doctor by Id with showing Hospital</td>
+          <td align="center">
+              <code>
+                  {
+                    doctor(id : 2){
+                      id
+                      firstName
+                      lastName
+                      position
+                      age
+                      salary
+                      birthday
+                      hospital{
+                        id
+                        name
+                      }
+                    }
+                  }
+              </code>
+          </td>
+          <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+          <td align="center"> Get Doctor by Id with showing Department </td>
+          <td align="center">
+              <code>
+                  {
+                    doctor(id : 2){
+                      id
+                      firstName
+                      lastName
+                      position
+                      age
+                      salary
+                      birthday
+                      department{
+                        id
+                        name
+                      }
+                    }
+                  }
+              </code>
+          </td>
+          <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get Doctor by Id with showing its information </td>
+        <td align="center">
+            <code>
+                {
+                  doctor(id : 2){
+                    id
+                    firstName
+                    lastName
+                    position
+                    age
+                    salary
+                    birthday
+                  }
+                }
+            </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+      <td align="center"> Get Doctor by Filter covering that Doctor has a surgeon, is greater than the age of 30 and its salary is greater than 12K</td>
+      <td align="center">
+          <code>
+              {
+                doctorsWithFilter(filter: {
+                  position: {
+                    operator: "eq",
+                    value: "Surgeon"
+                  },
+                  age: {
+                    operator: "gt"
+                    value: "30"
+                  }
+                  salary: {
+                    operator: "gt"
+                    value: "12000"
+                  }
+                }) {
+                  id
+                  firstName
+                  lastName
+                  age
+                  salary
+                  position
+                  birthday
+                }
+              }
+          </code>
+      </td>
+      <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+        <td align="center"> Get Doctor by Filter covering that its birthdate ranges from "1980-01-01" to "1990-05-01"/td>
+        <td align="center">
+            <code>
+                {
+                  doctorsWithFilter(filter: {
+                    birthday:{
+                      operator: "birthdayDate" 
+                      value: "1980-01-01,1990-05-01"
+                    }
+                  }) {
+                    id
+                    firstName
+                    lastName
+                    age
+                    salary
+                    position
+                    birthday
+                  }
+                }
+            </code>
+        </td>
+        <td align="center"> No Query Variable </td>
+  </tr>
+  <tr>
+      <td align="center"> Add New Doctor /td>
+      <td align="center">
+          <code>
+              mutation newDepartment($doctorInput: DoctorInput!) {
+                newDoctor(doctor: $doctorInput){
+                  firstName
+                  lastName
+                  position
+                  age
+                  salary
+                  birthday
+                  department{
+                    id
+                    name
+                  }
+                  hospital{
+                    id
+                    name
+                  }
+                }
+              }
+          </code>
+      </td>
+      <td align="center">
+        <code>
+            {
+              "doctorInput": {
+                "firstName": "FirstName üğişçöı",
+                "lastName": "LastName ÜĞİŞÇÖI",
+                "position": "Pediatrician",
+                "salary": 5000,
+                "age": 30,
+                "birthday": "1990-08-02",
+                "departmentId": 5,
+                "hospitalId" : 2
+              }
+            }
+        </code>     
+      </td>
+  </tr>
+  <tr>
+        <td align="center"> Update Doctor by Id /td>
+        <td align="center">
+            <code>
+                mutation updateDoctor($doctorInput: DoctorInput!) {
+                  updateDoctor(id: 8,doctor: $doctorInput){
+                    firstName
+                    lastName
+                    position
+                    age
+                    salary
+                    birthday
+                    department{
+                      name
+                    }
+                    hospital{
+                      name
+                    }
+                  }
+                }
+            </code>
+        </td>
+        <td align="center">
+          <code>
+              {
+                "doctorInput": {
+                  "firstName": "FirstName üğişçöı Update",
+                  "lastName": "LastName ÜĞİŞÇÖI Update",
+                  "position": "Obstetrician",
+                  "salary": 5000,
+                  "age": 30,
+                  "birthday": "1990-08-02",
+                  "departmentId": 1,
+                  "hospitalId" : 1
+                }
+              }
+          </code>     
+        </td>
+  </tr>
+  <tr>
+      <td align="center"> Delete Doctor by Id/td>
+      <td align="center">
+          <code>
+              mutation {
+                deleteDoctor (id: 8)
+              }
+          </code>
+      </td>
+      <td align="center"> No Query Variable </td>
   </tr>
 </table>
 
