@@ -348,7 +348,7 @@
     </td>
   </tr>
   <tr>
-     <td align="center" rowspan="13"> <b>Doctor</b> </td>
+     <td align="center" rowspan="14"> <b>Doctor</b> </td>
   </tr>
   <tr>
        <td align="center"> Get All Doctor list with showing Department and Hospital </td>
@@ -535,7 +535,7 @@
         <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-      <td align="center"> Get Doctor by Filter covering that Doctor has a surgeon, is greater than the age of 30 and its salary is greater than 12K</td>
+      <td align="center"> Get Doctor by Filter covering that Doctor has a surgeon, is greater than the age of 30 and its salary is greater than 12K </td>
       <td align="center">
           <code>
               {
@@ -567,7 +567,7 @@
       <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-        <td align="center"> Get Doctor by Filter covering that its birthdate ranges from "1980-01-01" to "1990-05-01"/td>
+        <td align="center"> Get Doctor by Filter covering that its birthdate ranges from "1980-01-01" to "1990-05-01" </td>
         <td align="center">
             <code>
                 {
@@ -591,7 +591,7 @@
         <td align="center"> No Query Variable </td>
   </tr>
   <tr>
-      <td align="center"> Add New Doctor /td>
+      <td align="center"> Add New Doctor </td>
       <td align="center">
           <code>
               mutation newDepartment($doctorInput: DoctorInput!) {
@@ -632,7 +632,7 @@
       </td>
   </tr>
   <tr>
-        <td align="center"> Update Doctor by Id /td>
+        <td align="center"> Update Doctor by Id </td>
         <td align="center">
             <code>
                 mutation updateDoctor($doctorInput: DoctorInput!) {
@@ -671,7 +671,7 @@
         </td>
   </tr>
   <tr>
-      <td align="center"> Delete Doctor by Id/td>
+      <td align="center"> Delete Doctor by Id </td>
       <td align="center">
           <code>
               mutation {
