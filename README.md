@@ -22,6 +22,8 @@
 
 <b>5 )</b> Run the <b>GraphiQL</b> after defining queries with its variable in its essential parts of the program
 
+<b>6 )</b> Show its result in <b>h2</b> database after connecting with this url (<code>http://localhost:8081/h2-console/</code>)
+
 ### Table
 
 <table style="border: 0px;">
