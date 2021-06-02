@@ -12,11 +12,13 @@
 
 ### 🔨 Run the App
 
-<b>1 )</b> 
+<b>1 )</b> Install GraphiQL from this website (<code>https://www.electronjs.org/apps/graphiql</code>)
 
-<b>2 )</b> 
+<b>2 )</b> Check if all <b>maven dependencies</b> are installed by using this code <code> mvn clean install </code>
 
-<b>3 )</b> 
+<b>3 )</b> Define a <b>query endpoint URL</b> in the <b>GraphiQL</b> (<code>http://localhost:8081/graphql</code>)
+
+<b>4 )</b> Run the <b>GraphiQL</b> after defining queries with its variable in its essential parts of the program
 
 ### Table
 
